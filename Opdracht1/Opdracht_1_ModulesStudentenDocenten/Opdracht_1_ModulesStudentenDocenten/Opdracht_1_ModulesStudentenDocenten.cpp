@@ -15,7 +15,9 @@ int main()
 	Module module3("Interface Design", 2);
 
 	Docent docent("Edwin");
-	Docent docent2("");
+	Docent docent2("Dimme");
+
+	Student student1("Niels");
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
