@@ -16,3 +16,13 @@ std::string Student::getName()
 {
 	return naam;
 }
+
+void Student::addEc(int _ec)
+{
+	ec = ec + _ec;
+}
+
+int Student::getEc()
+{
+	return ec;
+}

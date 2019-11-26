@@ -25,12 +25,14 @@ void Module::removeStudent(Student _student)
 
 void Module::getStudents()
 {
-	std::cout << "Studenten: ";
+	std::cout << "Studenten: " << std::endl;
 	int i;;
 	if (studenten.size() > 0) {
 		for (i = 0; i < studenten.size(); i++)
 		{
-			std::cout << studenten[i].getName();
+			std::cout << "Naam: " << studenten[i].getName() << std::endl;
+			std::cout << "EC: " << studenten[i].getEc() << std::endl;
+			std::cout << std::endl;
 		}
 	}
 	else {
@@ -40,10 +42,12 @@ void Module::getStudents()
 
 void Module::getDocent()
 {
-	std::cout << "Docent: " << docent.getName();
+	std::cout << "Docent: " << docent.getName() << std::endl;
 }
 
 void Module::getModule()
 {
-	std::cout << "Module: " << naam;
+	std::cout << "Module: " << naam << std::endl;
+	getDocent();
+	getStudents();
 }

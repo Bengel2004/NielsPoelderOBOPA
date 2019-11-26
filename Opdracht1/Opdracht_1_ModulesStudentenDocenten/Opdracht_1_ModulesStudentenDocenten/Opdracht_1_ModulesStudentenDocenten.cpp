@@ -2,10 +2,20 @@
 //
 
 #include <iostream>
+#include "Docent.h"
+#include "Module.h"
+#include "Student.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
+
+	Module module1("OBOPB", 2);
+	Module module2("OPOPA", 2);
+	Module module3("Interface Design", 2);
+
+	Docent docent("Edwin");
+	Docent docent2("");
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
