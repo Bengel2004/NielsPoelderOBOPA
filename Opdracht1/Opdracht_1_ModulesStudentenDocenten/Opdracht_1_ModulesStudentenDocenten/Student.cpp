@@ -26,3 +26,4 @@ int Student::getEc()
 {
 	return ec;
 }
+

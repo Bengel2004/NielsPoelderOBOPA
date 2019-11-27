@@ -10,16 +10,27 @@ Module::~Module()
 
 void Module::setDocent(Docent _docent) 
 {
+	std::cout << "Docent " << _docent.getName() << " toegevoegd aan " << naam << "." << std::endl << std::endl;
 	docent = _docent;
+}
+
+void Module::addStudent(std::vector<Student> _student)
+{
+	std::cout << _student.size() << " Studenten toegevoegd aan " << naam << "." << std::endl;
+	for (int i = 0; i < _student.size(); i++) {
+		studenten.push_back(_student[i]);
+	}
 }
 
 void Module::addStudent(Student _student)
 {
+	std::cout << "Student " << _student.getName() << " toegevoegd aan " << naam << "." << std::endl;
 	studenten.push_back(_student);
 }
 
-void Module::removeStudent(Student _student)
+void Module::removeStudent()
 {
+	std::cout << "Alle studenten verwijderd." << std::endl;
 	studenten.clear();
 }
 

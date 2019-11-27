@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 class Student
 {
 public:
@@ -11,7 +12,7 @@ public:
 	int getEc();
 
 private:
-	std::string naam;
-	int ec;
+	std::string naam = "(Onbekend)";
+	int ec = 0;
 };
 
