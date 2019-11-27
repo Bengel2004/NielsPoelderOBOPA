@@ -11,28 +11,39 @@ Matrix::~Matrix()
 
 void Matrix::DrawCells()
 {
+	
 	cells[0][3].SetAlive();
 	for (int i = 0; i < 25; i++)
 	{
 		for (int i2 = 0; i2 < 25; i2++)
 		{
 			int _neighbourAliveCount = 0;
-			if (cells[i - 1][i2].GetAlive()) 
-			{
-				_neighbourAliveCount += 1;
+			if ((i - 1) >= 0) {
+				if (cells[i - 1][i2].GetAlive())
+				{
+					_neighbourAliveCount += 1;
+				}
 			}
-			if (cells[i + 1][i2].GetAlive())
-			{
-				_neighbourAliveCount += 1;
+			if ((i2 + 1) <= 25) {
+				if (cells[i + 1][i2].GetAlive())
+				{
+					_neighbourAliveCount += 1;
+				}
 			}
-			if (cells[i][i2 - 1].GetAlive())
-			{
-				_neighbourAliveCount += 1;
+			if ((i2 - 1) >= 0) {
+				if (cells[i][i2 - 1].GetAlive())
+				{
+					_neighbourAliveCount += 1;
+				}
 			}
-			if (cells[i][i2 + 1].GetAlive())
-			{
-				_neighbourAliveCount += 1;
+			if ((i2 + 1) <= 25) {
+				if (cells[i][i2 + 1].GetAlive())
+				{
+					_neighbourAliveCount += 1;
+				}
 			}
+
+
 
 			if (_neighbourAliveCount < 2 || _neighbourAliveCount > 3) 
 			{
@@ -41,6 +52,7 @@ void Matrix::DrawCells()
 					cells[i][i2].Kill();
 				}
 			}
+
 			if (_neighbourAliveCount > 3 && !cells[i][i2].GetAlive()) 
 			{
 				cells[i][i2].SetAlive();
@@ -57,5 +69,5 @@ void Matrix::DrawCells()
 		//{
 		//}
 	}
-	std::cout << std::string(10, '\n');
+	
 }

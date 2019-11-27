@@ -7,12 +7,12 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
 	Matrix matrix;
 
 
 	for (int i = 0; i < 3; i++) {
 		matrix.DrawCells();
+	std::cout << std::endl;
 	}
 
 }
