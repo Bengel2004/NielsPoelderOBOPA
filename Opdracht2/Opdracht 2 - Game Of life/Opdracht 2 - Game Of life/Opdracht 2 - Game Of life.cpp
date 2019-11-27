@@ -10,9 +10,10 @@ int main()
 	Matrix matrix;
 
 
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < 3; i++) 
+	{
 		matrix.DrawCells();
-	std::cout << std::endl;
+		std::cout << std::endl;
 	}
 
 }
