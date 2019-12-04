@@ -151,7 +151,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Elves.cpp" />
+    <ClCompile Include="Farmer.cpp" />
+    <ClCompile Include="NPC.cpp" />
     <ClCompile Include="Opdracht 4.cpp" />
+    <ClCompile Include="Orcs.cpp" />
+    <ClCompile Include="Shaman.cpp" />
+    <ClCompile Include="Soldier.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Elves.h" />
+    <ClInclude Include="Farmer.h" />
+    <ClInclude Include="NPC.h" />
+    <ClInclude Include="Orcs.h" />
+    <ClInclude Include="Shaman.h" />
+    <ClInclude Include="Soldier.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
