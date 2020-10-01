@@ -152,7 +152,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Opdracht 8.cpp" />
-    <ClCompile Include="Particle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Particle.h" />

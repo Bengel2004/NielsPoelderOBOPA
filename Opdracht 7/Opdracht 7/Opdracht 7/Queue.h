@@ -1,27 +1,54 @@
 #pragma once
-
-#include <vector>
 #include <iostream>
+#include <algorithm>
+#include <typeinfo>
+#include <vector>
 
-using namespace std;
-
-template<typename T>
-class Queue {
+template <class T>
+class Queue
+{
 public:
-	Queue() {
+	T* queue;
+	int size;
+
+	Queue(T arr[]) {
+		queue = arr;
+		size = sizeof(arr) / sizeof(arr[0]) + 1;
 	}
 
-	void add(T element) {
-		elements.push_back(element);
-	}
+	virtual ~Queue() {
+	};
 
-	void dump() {
-		for (int i = 0; i < elements.size(); i++) {
-			std::cout << elements[i] << std::endl;
+	void put(T element) {
+		int newSize = size + 1;
+		T* tempQueue = new T[newSize];
+
+		for (int i = 0; i < newSize; i++)
+		{
+			if (i == size)
+			{
+				tempQueue[i] = element;
+			}
+			else
+			{
+				tempQueue[i] = queue[i];
+			}
 		}
+
+		size++;
+		queue = tempQueue;
 	}
 
-private:
-	vector<T> elements;
-};
+	T getFirst() {
+		T value = queue[0];
+		return value;
+	}
 
+	void printQueue() {
+		for (int i = 0; i < size; i++)
+		{
+			std::cout << queue[i] << " ";
+		}
+		std::cout << std::endl;
+	}
+};
